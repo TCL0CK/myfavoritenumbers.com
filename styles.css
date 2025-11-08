@@ -1,6 +1,7 @@
 @font-face {
   font-family: 'magnetfont';
-  src: url('MagLettLearningResourcesFilled.ttf') format('truetype');
+  src: local('MagLettLearningResourcesFilled'),
+       url('MagLettLearningResourcesFilled.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
