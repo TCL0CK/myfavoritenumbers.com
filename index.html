@@ -1,3 +1,5 @@
+// hex values for font: #B81808, #F26F03, #E8B21D, #0B7E35, #0065A9, #7F0866
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,7 +12,7 @@
     <div style="text-align:center;">
       <img src="my favorite numbers.png" alt="my favorite numbers logo" style="width:25%; height:auto; object-fit:contain;">
     </div>
-    <div style="text-align:center; font-family: 'magnetfont'; font-size: 24px;">
+    <div style="text-align:center; font-family: 'magnetfont'; font-size: 24px;" class="rainbow">
       demos
     </div>
     <p>BEAR</p>
@@ -29,5 +31,44 @@
     <audio controls>
         <source src="I Wanna Know Take 3.wav" type="audio/wav">
     </audio>
+    <script>
+(function() {
+  const palette = ['#B81808', '#F26F03', '#E8B21D', '#0B7E35', '#0065A9', '#7F0866'];
+
+  function getRandomIndex(excludeIndex) {
+    if (palette.length <= 1) return 0;
+    let idx = Math.floor(Math.random() * palette.length);
+    while (idx === excludeIndex) {
+      idx = Math.floor(Math.random() * palette.length);
+    }
+    return idx;
+  }
+
+  function colorizeElement(el) {
+    const text = el.textContent;
+    el.innerHTML = '';
+    let prevIndex = -1;
+    for (const ch of text.split('')) {
+      const span = document.createElement('span');
+      span.textContent = ch;
+      if (ch.trim() === '') {
+        span.style.whiteSpace = 'pre';
+      } else {
+        const idx = getRandomIndex(prevIndex);
+        prevIndex = idx;
+        span.style.color = palette[idx];
+      }
+      el.appendChild(span);
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('.rainbow').forEach(function (el) {
+      colorizeElement(el);
+      el.addEventListener('click', function () { colorizeElement(el); });
+    });
+  });
+})();
+</script>
 </body>
 </html>
