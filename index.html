@@ -10,26 +10,26 @@
     <div style="text-align:center;">
       <img src="my favorite numbers.png" alt="my favorite numbers logo" style="width:25%; height:auto; object-fit:contain;">
     </div>
-    <div style="text-align:center; font-family: 'magnetfont'; font-size: 24px; margin: 40px auto;" class="rainbow">
+    <div style="text-align:center; font-family: 'magnetfont'; font-size: 24px; margin: 40px 0;" class="rainbow">
       demos
     </div>
     <div style="display: flex; justify-content: space-around; align-items: center; margin: 0 80px;">
-    <audio controls>
-        <source src="Bear Take 3.wav" type="audio/wav">
-    </audio>
-    <audio controls>
-        <source src="Beautifu Drifters Take 2.wav" type="audio/wav">
-    </audio>
+      <audio controls>
+          <source src="Bear Take 3.wav" type="audio/wav">
+      </audio>
+      <audio controls>
+          <source src="Beautifu Drifters Take 2.wav" type="audio/wav">
+      </audio>
     </div>
     <div style="display: flex; justify-content: space-around; align-items: center; margin: 5px 80px;">
-    <audio controls>
-        <source src="Horsepower Take 5.wav" type="audio/wav">
-    </audio>
-    <audio controls>
-        <source src="I Wanna Know Take 3.wav" type="audio/wav">
-    </audio>
+      <audio controls>
+          <source src="Horsepower Take 5.wav" type="audio/wav">
+      </audio>
+      <audio controls>
+          <source src="I Wanna Know Take 3.wav" type="audio/wav">
+      </audio>
     </div>
-    <div style="text-align:center; font-family: 'magnetfont'; font-size: 24px; margin: 40px auto;" class="rainbow">
+    <div style="text-align:center; font-family: 'magnetfont'; font-size: 24px; margin: 40px 0;" class="rainbow">
       gallery
     </div>
     <div style="display: flex; justify-content: space-around; align-items: center;">
@@ -37,9 +37,7 @@
       <img src="houseparty2.jpg" alt="houseparty2" style="width:25%; height:auto;">
       <img src="houseparty3.jpg" alt="houseparty3" style="width:25%; height:auto;">
     </div>
-     <div style="text-align:center; font-family: 'magnetfont'; font-size: 16px;" class="rainbow">
-      from debut house party show
-    </div>
+    <div style="text-align:center; font-family: 'magnetfont'; font-size: 16px;" class="rainbow">from debut house party show</div>
     <script>
 (function() {
   const palette = ['#B81808', '#F26F03', '#E8B21D', '#0B7E35', '#0065A9', '#7F0866'];
@@ -54,7 +52,7 @@
   }
 
   function colorizeElement(el) {
-    const text = el.textContent;
+    const text = el.textContent.trim();
     el.innerHTML = '';
     let prevIndex = -1;
     for (const ch of text.split('')) {
