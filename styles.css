@@ -4,3 +4,88 @@
   font-weight: normal;
   font-style: normal;
 }
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  body {
+    padding: 0 10px;
+  }
+
+  /* Header/Logo section */
+  [style*="position:relative; display:flex; justify-content:center"] {
+    flex-direction: column;
+    margin: 10px 0 !important;
+  }
+
+  [style*="position:absolute; right:24px"] {
+    position: relative !important;
+    transform: none !important;
+    margin-top: 10px;
+  }
+
+  /* Text sizing */
+  [style*="font-size: 24px"] {
+    font-size: 18px !important;
+  }
+
+  [style*="font-size: 16px"] {
+    font-size: 14px !important;
+  }
+
+  [style*="font-size: 12px"] {
+    font-size: 10px !important;
+  }
+
+  /* Demos and Gallery flex containers */
+  [style*="display: flex; justify-content: space-around"] {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  /* Audio players and images */
+  audio {
+    width: 100%;
+    max-width: 280px;
+  }
+
+  [style*="width:25%"] {
+    width: 100% !important;
+    margin-bottom: 15px;
+  }
+
+  /* Logo image size */
+  [style*="width:25%; height:auto; object-fit:contain"] {
+    width: 60% !important;
+  }
+
+  /* Icon sizes */
+  [style*="width:48px"] {
+    width: 36px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 0 5px;
+  }
+
+  [style*="font-size: 24px"] {
+    font-size: 16px !important;
+  }
+
+  [style*="font-size: 16px"] {
+    font-size: 12px !important;
+  }
+
+  [style*="margin: 40px"] {
+    margin: 20px 0 !important;
+  }
+
+  [style*="margin: 20px"] {
+    margin: 10px 0 !important;
+  }
+
+  [style*="gap:12px"] {
+    gap: 8px !important;
+  }
+}
